@@ -37,5 +37,5 @@ func main() {
 	p := person{
 		name: "Mauricio",
 	}
-	saySomeThing(&p)
+	saySomeThing(&p) //with the operator & We can share the direction of memory the a variable.
 }
