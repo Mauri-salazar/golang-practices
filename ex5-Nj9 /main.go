@@ -11,7 +11,7 @@ func main() {
 	fmt.Println("CPUs", runtime.NumCPU())                       // I get the numbers CPUs
 	fmt.Println("Numbers of Goroutine", runtime.NumGoroutine()) // I get the numbers Goroutine
 
-	var counter int64
+	var counter int64 // I'm setting the value of the counter to the type int64(0)
 
 	gr := 100
 
@@ -20,8 +20,8 @@ func main() {
 
 	for i := 0; i < gr; i++ {
 		go func() {
-			atomic.AddInt64(&counter, 1)
-			fmt.Println(atomic.LoadInt64(&counter))
+			atomic.AddInt64(&counter, 1)            // I use AddInt64() that is a method in the atomic to increase a value.
+			fmt.Println(atomic.LoadInt64(&counter)) // LoadInt64() print the value
 			wg.Done()
 		}()
 	}
