@@ -1,6 +1,7 @@
 package main
 
 import (
+	yearsDog "dog/dog"
 	"fmt"
 )
 
@@ -12,7 +13,7 @@ type dog struct {
 func main() {
 	d1 := dog{
 		name: "Tom",
-		age:  dog.yearsDog(2),
+		age:  yearsDog.YearsDog(2),
 	}
 	fmt.Println(d1)
 }

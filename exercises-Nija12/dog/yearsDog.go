@@ -2,7 +2,7 @@
 package yearsDog
 
 // multiply human year * dog year
-func yearsDog(a int) int {
+func YearsDog(a int) int {
 	yearsDog := 7
 
 	//condition
